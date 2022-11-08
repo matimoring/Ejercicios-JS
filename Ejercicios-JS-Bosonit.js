@@ -1,6 +1,7 @@
 /*
 Ejercicio 1
 Dado un array de objetos, obtener el objeto con el id 3*/
+console.log('Ejercicio 1')
 
 const arrNames = [
   {id: 1, name: 'Pepe'},
@@ -31,6 +32,7 @@ objetoTres()*/
 /*
 Ejrcicio 2
 Dado un array de valores, devolver un array truthy (sin valores nulos, vacíos, no números, indefinidos o falsos)*/
+console.log('Ejercicio 2')
 
 const arrDirty = [NaN, 0, 5, false, -1, '',undefined, 3, null, 'test']
 
@@ -39,6 +41,8 @@ console.log(filteredarrDirty);
 
 /*Ejercicio 3
 Dado un array de ciudades, sacar todas las ciudades de España que no sean capitales*/
+console.log('Ejercicio 3')
+
 const arrCities = [
   {city: 'Logroño', country: 'Spain', capital: false},
   {city: 'Paris', country: 'France', capital: true},
@@ -59,6 +63,7 @@ console.log(españa);
 Ejercicio 4
 Dado tres arrays de números, sacar en un nuevo array la intersección de estos. 
 */
+console.log('Ejercicio 4')
 
 const arrNumber1 = [1,2,3];
 const arrNumber2 = [1,2,3,4,5];
@@ -85,6 +90,7 @@ Dado un array de ciudades, sacar en un nuevo array las ciudades no capitales con
 sean city y isSpain. El valor de isSpain será un booleano indicando si es una ciudad de España.
 Ejemplo: {city: "Logroño", isSpain: "true"}
 */
+console.log('Ejercicio 5')
 
 const arrCities2 = [
   {city: 'Logroño', country: 'Spain', capital: false},
@@ -122,18 +128,18 @@ Ejemplo de uso de la función:
 let roundedResult2 = roundTo(1.123456789, 6);
   console.log(roundedResult2); // 1.123457
   */
+console.log('Ejercicio 6')
 
 let roundedResult = (number, decimal) =>{
   return parseFloat(Math.round(number * 100) / 100).toFixed(decimal);
    };
   console.log(roundedResult(2.6511382, 6))
-  console.log(roundedResult(210.65826370 , 7))
+  console.log(roundedResult(210.65826370 , 8))
 
 /* 
 VER - Ejercicio 7 
 Crea una función que retorne los campos de un objeto que equivalgan a un valor “falsy” 
-después de ser ejecutados por una función 
-específica. La función debe tener dos parámetros:
+después de ser ejecutados por una función específica. La función debe tener dos parámetros:
 Primer parámetro es un objeto con x número de campos y valores
 Segundo parametro es una funcion que retorne un booleano, que se tiene que aplicar 
 al objeto del primer parámetro
@@ -141,7 +147,7 @@ al objeto del primer parámetro
 Ejemplo de uso de la función:
 const result = returnFalsyValues({ a: 1, b: '2', c: 3 }, x => typeof x === 'string')
 console.log(result); // {a: 1, c: 3}*/
-
+console.log('Ejercicio 7')
 
 const typeOf = function returnTypeOf(x) {
   if(typeof(x) === 'string') {
@@ -163,24 +169,26 @@ function returnFalsyValues(obj, typeOf){
   return 'nada'
  }
 }
+
 console.log(typeOf({a: '1', b: 2, c:8}))
 
-//Ejercicio 8
-//Crea una función que convierta un número de bytes en un formato con valores legibles 
-//('B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'). La función debe tener 2 parámetros:
-//Primer parámetro debe ser el número de bytes
-//Segundo parámetro debe ser un número especificando la cantidad de dígitos a los que se debe truncar el resultado 
-//(esto se puede hacer con Number.prototype.toPrecision()). Por defecto, este parámetro debe de tener un valor de 3.
+/*Ejercicio 8
+Crea una función que convierta un número de bytes en un formato con valores legibles 
+('B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'). La función debe tener 2 parámetros:
+Primer parámetro debe ser el número de bytes
+Segundo parámetro debe ser un número especificando la cantidad de dígitos a los que se debe truncar el resultado 
+(esto se puede hacer con Number.prototype.toPrecision()). Por defecto, este parámetro debe de tener un valor de 3.
 
-//Ejemplo de uso de la función:
-//const result = fromBytesToFormattedSizeUnits(1000);
-//console.log(result); // 1KB
+Ejemplo de uso de la función:
+const result = fromBytesToFormattedSizeUnits(1000);
+console.log(result); // 1KB
 
-//const result = fromBytesToFormattedSizeUnits(123456789);
-//console.log(result); // 123MB
+const result = fromBytesToFormattedSizeUnits(123456789);
+console.log(result); // 123MB
 
-//const result = fromBytesToFormattedSizeUnits(-12145489451.5932, 5);
-//console.log(result); // -12.145GB
+const result = fromBytesToFormattedSizeUnits(-12145489451.5932, 5);
+console.log(result); // -12.145GB*/
+console.log('Ejercicio 8')
 
 function fromBytesToFormattedSizeUnits(bytes, digits){
   let i = Math.floor( Math.log(bytes) / Math.log(1000)),
@@ -191,10 +199,23 @@ function fromBytesToFormattedSizeUnits(bytes, digits){
 
 console.log(fromBytesToFormattedSizeUnits(900000))
 
-//Ejercicio 9
-//Crea una función que a partir de un objeto de entrada, retorne un objeto asegurándose que las claves del objeto estén en lowercase.
-//La función debe tener un objeto como único parámetro.
-//Ejemplo de uso de la función:
-//const myObject = { NamE: 'Charles', ADDress: 'Home Street' };
-//const myObjLowercase = toLowercaseKeys(myObject);
-//console.log(myObjLowercase); // { name: 'Charles', address: 'Home Street' }
+/*Ejercicio 9
+Crea una función que a partir de un objeto de entrada, retorne un objeto asegurándose que las claves del objeto estén en lowercase.
+La función debe tener un objeto como único parámetro.
+Ejemplo de uso de la función:
+const myObject = { NamE: 'Charles', ADDress: 'Home Street' };
+const myObjLowercase = toLowercaseKeys(myObject);
+console.log(myObjLowercase); // { name: 'Charles', address: 'Home Street' }*/
+console.log('Ejercicio 9')
+
+const lowercaseKeys = (obj) =>{
+  let resultLC = {};
+  Object.entries(obj).forEach(([key, value]) => {
+    const newObject = {[key.toLowerCase()]: value}
+    resultLC = {...resultLC, ...newObject}
+  });
+  console.log(resultLC);
+}
+
+
+console.log(lowercaseKeys({ NamE: 'Charles', ADDress: 'Home Street' }))
