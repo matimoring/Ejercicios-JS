@@ -190,23 +190,32 @@ const result = fromBytesToFormattedSizeUnits(-12145489451.5932, 5);
 console.log(result); // -12.145GB*/
 console.log('Ejercicio 8')
 
-function fromBytesToFormattedSizeUnits(bytes, digits){
+function fromBytesToFormattedSizeUnits(bytes){
   let i = Math.floor( Math.log(bytes) / Math.log(1000)),
   sizes = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-  digits = 3;
   return ( bytes / Math.pow(1000, i).toPrecision(3)*1 + ' ' + sizes[i])
 }
 
-console.log(fromBytesToFormattedSizeUnits(900000))
+console.log(fromBytesToFormattedSizeUnits(100000))
+
+console.log(fromBytesToFormattedSizeUnits(600000))
+
+
 
 /*Ejercicio 9
-Crea una función que a partir de un objeto de entrada, retorne un objeto asegurándose que las claves del objeto estén en lowercase.
+Crea una función que a partir de un objeto de entrada, 
+retorne un objeto asegurándose que las claves del objeto estén en lowercase.
 La función debe tener un objeto como único parámetro.
 Ejemplo de uso de la función:
 const myObject = { NamE: 'Charles', ADDress: 'Home Street' };
 const myObjLowercase = toLowercaseKeys(myObject);
 console.log(myObjLowercase); // { name: 'Charles', address: 'Home Street' }*/
 console.log('Ejercicio 9')
+
+
+
+console.log(toLowercaseKeys({ NamE: 'Charles', ADDress: 'Home Street' }))
+
 
 const lowercaseKeys = (obj) =>{
   let resultLC = {};
@@ -218,4 +227,3 @@ const lowercaseKeys = (obj) =>{
 }
 
 
-console.log(lowercaseKeys({ NamE: 'Charles', ADDress: 'Home Street' }))
