@@ -196,9 +196,9 @@ function fromBytesToFormattedSizeUnits(bytes){
   return ( bytes / Math.pow(1000, i).toPrecision(3)*1 + ' ' + sizes[i])
 }
 
-console.log(fromBytesToFormattedSizeUnits(100000))
+console.log(fromBytesToFormattedSizeUnits(1000000));
 
-console.log(fromBytesToFormattedSizeUnits(600000))
+console.log(fromBytesToFormattedSizeUnits(600000));
 
 
 
