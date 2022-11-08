@@ -226,4 +226,25 @@ const lowercaseKeys = (obj) =>{
   console.log(resultLC);
 }
 
+/*Ejercicio 10
+Crea una función que elimine las etiquetas html o xml de un string.
+La función debe tener un string como único parámetro.*/
+console.log("Ejercicio 10")
+
+let removeHtmltags = (string) => {
+  let result = string.replace(/<[^>]*>/g, "");
+    return result;
+};
+
+console.log(removeHtmltags('<div><span>lorem</span> <strong>ipsum</strong></div>'))
+
+
+
+
+/*Ejercicio 11 
+
+Crea una función que tome un array como parametro y lo divida en arrays nuevos con tantos elementos como sean especificados.
+La función debe tener dos parámetros:
+El primer parámetro es el array entero que se quiere dividir.*/
+
 
